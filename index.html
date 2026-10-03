@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite de Utilidades | JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fondo fondo-1"></div>
+    <div class="fondo fondo-2"></div>
+
+    <div class="contenedor">
+        <header class="encabezado">
+            <div>
+                <span class="etiqueta">PROYECTO ACADÉMICO · JAVASCRIPT</span>
+                <h1>Suite de Utilidades</h1>
+                <p>Calculadoras y conversiones realizadas con JavaScript.</p>
+            </div>
+            <div class="estado"><span></span> Sistema listo</div>
+        </header>
+
+        <section class="presentacion">
+            <div>
+                <span class="mini-etiqueta">DESARROLLO DE SOFTWARE</span>
+                <h2>Calcula, convierte y comprueba.</h2>
+                <p>Ejercicios de algoritmos secuenciales, condicionales y selección múltiple con <strong>switch</strong>.</p>
+            </div>
+            <div class="contador">
+                <strong>5</strong>
+                <small>UTILIDADES</small>
+            </div>
+        </section>
+
+        <main class="grid">
+            <!-- EJERCICIO 1 -->
+            <section class="tarjeta">
+                <div class="cabecera-tarjeta">
+                    <div class="icono morado">%</div>
+                    <span>01</span>
+                </div>
+                <h3>Calculadora de propina</h3>
+                <p>Pide los datos por <strong>prompt</strong> y calcula la propina y el total.</p>
+
+                <div class="formula">
+                    Propina = cuenta × (porcentaje / 100)
+                </div>
+
+                <button onclick="calcularPropina()">Ejecutar ejercicio <b>→</b></button>
+                <div id="resultadoPropina" class="resultado">
+                    El resultado aparecerá aquí.
+                </div>
+            </section>
+
+            <!-- EJERCICIO 2 -->
+            <section class="tarjeta">
+                <div class="cabecera-tarjeta">
+                    <div class="icono azul">⚖</div>
+                    <span>02</span>
+                </div>
+                <h3>Clasificador de IMC</h3>
+                <p>Pide peso y altura, calcula el IMC y lo clasifica según los rangos indicados.</p>
+
+                <div class="formula">
+                    IMC = peso / (altura²)
+                </div>
+
+                <button onclick="calcularIMC()">Ejecutar ejercicio <b>→</b></button>
+                <div id="resultadoIMC" class="resultado">
+                    El resultado aparecerá aquí.
+                </div>
+            </section>
+
+            <!-- EJERCICIO 3 -->
+            <section class="tarjeta grande">
+                <div class="cabecera-tarjeta">
+                    <div class="icono verde">⌘</div>
+                    <span>03 · SWITCH</span>
+                </div>
+                <h3>Menú de utilidades</h3>
+                <p>Selecciona una opción. El programa utiliza <strong>switch</strong> para ejecutar la utilidad correspondiente.</p>
+
+                <select id="menuOpcion">
+                    <option value="">Selecciona una utilidad...</option>
+                    <option value="1">1 · Celsius → Fahrenheit</option>
+                    <option value="2">2 · Precio con IVA</option>
+                    <option value="3">3 · Nota (0–100) → Letra</option>
+                </select>
+
+                <button onclick="ejecutarMenu()">Ejecutar opción <b>→</b></button>
+
+                <div id="resultadoMenu" class="resultado">
+                    El resultado aparecerá aquí.
+                </div>
+
+                <div class="rangos">
+                    <div><b>A</b><span>90–100</span></div>
+                    <div><b>B</b><span>80–89</span></div>
+                    <div><b>C</b><span>70–79</span></div>
+                    <div><b>D</b><span>60–69</span></div>
+                    <div><b>F</b><span>0–59</span></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <span>Suite de Utilidades</span>
+            <span>HTML · CSS · JavaScript</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

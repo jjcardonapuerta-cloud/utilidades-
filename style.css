@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --fondo: #070a12;
+    --tarjeta: #101522;
+    --borde: #263044;
+    --texto: #f5f7fb;
+    --gris: #8994a9;
+    --morado: #8b6cff;
+    --azul: #37d9e8;
+    --verde: #35d6a0;
+    --rojo: #ff667d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 28px 18px;
+    overflow-x: hidden;
+    color: var(--texto);
+    background: var(--fondo);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+.fondo {
+    position: fixed;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(85px);
+    opacity: .25;
+    pointer-events: none;
+}
+
+.fondo-1 {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+    right: -80px;
+    background: var(--morado);
+}
+
+.fondo-2 {
+    width: 280px;
+    height: 280px;
+    bottom: -120px;
+    left: -100px;
+    background: var(--azul);
+}
+
+.contenedor {
+    max-width: 1080px;
+    margin: auto;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 2px 25px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.etiqueta,
+.mini-etiqueta {
+    color: var(--verde);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+h1 {
+    margin: 5px 0;
+    font-size: clamp(30px, 5vw, 44px);
+}
+
+.encabezado p,
+.presentacion p {
+    color: var(--gris);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.estado {
+    padding: 8px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    color: #aab3c4;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.estado span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: var(--verde);
+}
+
+.presentacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+    padding: 25px;
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    background: linear-gradient(110deg, #11182a, #0e1421);
+}
+
+h2 {
+    margin: 8px 0;
+    font-size: clamp(25px, 4vw, 35px);
+}
+
+.presentacion p {
+    max-width: 650px;
+    font-size: 13px;
+}
+
+.contador {
+    min-width: 85px;
+    height: 85px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    border: 1px solid #ffffff12;
+    border-radius: 50%;
+    color: var(--morado);
+    background: #8b6cff0c;
+}
+
+.contador strong {
+    font: 700 28px "Space Grotesk";
+}
+
+.contador small {
+    color: var(--gris);
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: .12em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.tarjeta {
+    padding: 23px;
+    border: 1px solid var(--borde);
+    border-radius: 19px;
+    background: linear-gradient(145deg, #111827, #0c111d);
+    box-shadow: 0 20px 60px #0004;
+}
+
+.tarjeta.grande {
+    grid-column: 1 / -1;
+}
+
+.cabecera-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.cabecera-tarjeta > span {
+    color: #647087;
+    font: 700 11px "Space Grotesk";
+}
+
+.icono {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.morado {
+    color: var(--morado);
+    background: #8b6cff18;
+}
+
+.azul {
+    color: var(--azul);
+    background: #37d9e818;
+}
+
+.verde {
+    color: var(--verde);
+    background: #35d6a018;
+}
+
+h3 {
+    margin: 0 0 7px;
+    font-size: 20px;
+}
+
+.tarjeta > p {
+    margin: 0 0 17px;
+    color: var(--gris);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.formula {
+    padding: 12px;
+    margin-bottom: 14px;
+    border: 1px solid var(--borde);
+    border-radius: 9px;
+    color: #b9c2d2;
+    background: #090e19;
+    font-family: Consolas, monospace;
+    font-size: 12px;
+}
+
+select {
+    width: 100%;
+    height: 45px;
+    padding: 10px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 9px;
+    outline: none;
+    color: var(--texto);
+    background: #090e19;
+    font: 14px "DM Sans";
+}
+
+select:focus {
+    border-color: var(--morado);
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 9px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, var(--morado), #6749dc);
+    font: 700 13px "DM Sans";
+    transition: .15s;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+button b {
+    margin-left: 6px;
+}
+
+.resultado {
+    min-height: 48px;
+    margin-top: 12px;
+    padding: 12px 14px;
+    border: 1px solid #35d6a025;
+    border-left: 3px solid var(--verde);
+    border-radius: 9px;
+    color: #dce4f1;
+    background: #35d6a008;
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.resultado.vacio {
+    border-color: var(--borde);
+    border-left-color: var(--borde);
+    color: #626e83;
+    background: #ffffff03;
+    font-style: italic;
+}
+
+.resultado.error {
+    border-color: #ff667d30;
+    border-left-color: var(--rojo);
+    color: #ff9bab;
+}
+
+.rangos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+    margin-top: 15px;
+}
+
+.rangos div {
+    padding: 9px 5px;
+    text-align: center;
+    border: 1px solid #ffffff08;
+    border-radius: 7px;
+    background: #ffffff05;
+}
+
+.rangos b {
+    display: block;
+    color: var(--verde);
+}
+
+.rangos span {
+    color: var(--gris);
+    font-size: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 2px 0;
+    color: #5f6b80;
+    font-size: 10px;
+}
+
+@media (max-width: 700px) {
+    .encabezado,
+    .presentacion {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta.grande {
+        grid-column: auto;
+    }
+
+    .rangos {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    footer {
+        gap: 10px;
+        flex-direction: column;
+    }
+}
